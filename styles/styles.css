@@ -1,0 +1,178 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+  min-height: 100vh;
+}
+
+/* Общий контейнер Grid */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas: "header" "nav" "main" "footer";
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
+}
+
+/* Хэдер */
+.header {
+  grid-area: header;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg,#2c3e50,#34495e);
+  padding: 30px;
+}
+
+/* Навигация */
+.nav {
+  grid-area: nav;
+  background: #2c3e50;
+  padding: 15px 0;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+.nav-link:hover,
+.nav-link.active {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Контент */
+main.content {
+  grid-area: main;
+  padding: 40px;
+}
+
+/* Фото и блок "Обо мне" */
+.profile-photo {
+  display:block;
+  margin:0 auto 20px;
+  width:220px;
+  height:280px;
+  border-radius:15px;
+  object-fit:cover;
+  border:4px solid #667eea;
+}
+.about-me {
+  background:#f8f9fa;
+  padding:25px;
+  border-left:5px solid #667eea;
+  border-radius:10px;
+  margin:30px 0;
+}
+
+/* Навыки (Grid) */
+.skills-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:15px;
+}
+.skill-tag {
+  background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);
+  color:#fff;
+  text-align:center;
+  padding:12px 25px;
+  border-radius:25px;
+  font-weight:600;
+  transition:0.3s;
+}
+.skill-tag:hover {
+  transform:translateY(-3px);
+}
+
+/* Опыт (Grid) */
+.experience-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+.experience-card {
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+  border-left:4px solid #667eea;
+  transition:transform 0.3s;
+}
+.experience-card:hover {
+  transform:translateX(5px);
+}
+
+/* Футер */
+.footer {
+  grid-area: footer;
+  background: linear-gradient(135deg,#2c3e50,#34495e);
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+@media (max-width:768px) {
+  .nav-list { flex-direction: column; gap:10px; }
+  main.content { padding:20px; }
+}
+
+/* ===== ПРОГРЕСС-БАРЫ ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.skill-label {
+  font-weight: 600;
+  color: #2c3e50;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.progress {
+  height: 12px;
+  background: #e9ecef;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  border-radius: 6px 0 0 6px;
+  transition: width 0.8s ease;
+}
+
+/* Адаптивность для узких экранов */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Ссылка-карточка (весь блок кликабелен) */
+.experience-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.experience-card-link:hover {
+  transform: translateY(-3px);
+}
