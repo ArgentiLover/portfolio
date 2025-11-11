@@ -35,3 +35,13 @@ if (dialog) {
     });
   });
 }
+
+// === ОБРАБОТКА ФОРМЫ КОНТАКТОВ ===
+const contactForm = document.getElementById('contactForm');
+if(contactForm){
+  contactForm.addEventListener('submit', e=>{
+    e.preventDefault();
+    alert('Сообщение отправлено!');
+    contactForm.reset();
+  });
+}
