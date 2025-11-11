@@ -3,3 +3,35 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const el = document.getElementById('year');
   if(el) el.textContent = y;
 });
+
+// === МОДАЛЬНОЕ ОКНО ПРОЕКТОВ ===
+const dialog = document.getElementById('projectDialog');
+if (dialog) {
+  const projects = {
+    1: {
+      title: 'Морской бой',
+      img: '../images/p1.jpg',
+      desc: 'Морской бой. Дополнительная кастомизация игры и вариантов стрельбы.',
+      link: 'https://github.com/ArgentiLover/SeaBattleProject'
+    },
+    2: {
+      title: 'Учебный сайт',
+      img: '../images/p2.jpg',
+      desc: 'HTML/CSS, JS.',
+      link: 'https://github.com/ArgentiLover/my-awesome-project/'
+    },
+  };
+
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const id = card.getAttribute('data-project');
+      const p = projects[id];
+      if (!p) return;
+      document.getElementById('dialogTitle').textContent = p.title;
+      document.getElementById('dialogImage').src = p.img;
+      document.getElementById('dialogDesc').textContent = p.desc;
+      document.getElementById('dialogLink').href = p.link;
+      dialog.showModal();
+    });
+  });
+}
