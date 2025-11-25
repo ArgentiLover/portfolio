@@ -37,15 +37,29 @@
           <div class="projects-grid">
             
             <div class="project-card" data-project="1">
-              <img src="../images/p1.jpg" alt="Морской бой - игра на Python с интерфейсом QT" class="project-image">
-              <h4>Морской бой</h4>
-              <p>Python, QT Creator</p>
+                <picture>
+                    <source media="(max-width: 480px)" srcset="../images/p1-small.jpg">
+                    <source srcset="../images/p1@2x.jpg 2x">
+                    <img src="../images/p1.jpg" 
+                        alt="Морской бой - игра на Python с интерфейсом QT" 
+                        class="project-image"
+                        loading="lazy">
+                </picture>
+                <h4>Морской бой</h4>
+                <p>Python, QT Creator</p>
             </div>
 
             <div class="project-card" data-project="2">
-              <img src="../images/p2.jpg" alt="Учебный сайт - адаптивная верстка на HTML/CSS/JS" class="project-image">
-              <h4>Учебный сайт</h4>
-              <p>HTML/CSS, JavaScript, Bootstrap</p>
+                <picture>
+                    <source media="(max-width: 480px)" srcset="../images/p2-small.jpg">
+                    <source srcset="../images/p2@2x.jpg 2x">
+                    <img src="../images/p2.jpg" 
+                        alt="Учебный сайт - адаптивная верстка на HTML/CSS/JS" 
+                        class="project-image"
+                        loading="lazy">
+                </picture>
+                <h4>Учебный сайт</h4>
+                <p>HTML/CSS, JavaScript, Bootstrap</p>
             </div>
 
           </div>

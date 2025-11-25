@@ -22,18 +22,23 @@ if (dialog) {
     },
   };
 
-  document.querySelectorAll('.project-card').forEach(card => {
+document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', () => {
-      const id = card.getAttribute('data-project');
-      const p = projects[id];
-      if (!p) return;
-      document.getElementById('dialogTitle').textContent = p.title;
-      document.getElementById('dialogImage').src = p.img;
-      document.getElementById('dialogDesc').textContent = p.desc;
-      document.getElementById('dialogLink').href = p.link;
-      dialog.showModal();
+        const id = card.getAttribute('data-project');
+        const p = projects[id];
+        if (!p) return;
+        
+        const dialogImage = document.getElementById('dialogImage');
+        dialogImage.src = p.img;
+        dialogImage.alt = p.title + ' - скриншот проекта';
+        dialogImage.loading = 'lazy';
+        
+        document.getElementById('dialogTitle').textContent = p.title;
+        document.getElementById('dialogDesc').textContent = p.desc;
+        document.getElementById('dialogLink').href = p.link;
+        dialog.showModal();
     });
-  });
+});
 }
 
 // === ОБРАБОТКА ФОРМЫ КОНТАКТОВ ===
