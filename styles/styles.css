@@ -127,7 +127,7 @@ body {
 .nav-link {
     display: block;
     padding: var(--space-sm) var(--space-md);
-    color: var(--text-white);
+    color: #ffffff;
     text-decoration: none;
     border-radius: var(--radius-md);
     transition: var(--transition);
@@ -135,13 +135,16 @@ body {
 }
 
 .nav-link:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     transform: translateY(-1px);
+    color: #ffffff;
 }
 
 .nav-link.active {
-    background: rgba(255, 255, 255, 0.2);
-    font-weight: 600;
+    background: rgba(255, 255, 255, 0.25);
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
 /* Основной контент */
