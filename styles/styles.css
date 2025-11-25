@@ -104,7 +104,7 @@ body {
 /* Навигация */
 .nav {
     grid-area: nav;
-    background: var(--primary-color);
+    background: #1d4ed8;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -141,10 +141,9 @@ body {
 }
 
 .nav-link.active {
-    background: rgba(255, 255, 255, 0.25);
+    background: #1e40af;
     font-weight: 700;
     color: #ffffff;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
 /* Основной контент */
