@@ -40,13 +40,3 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 }
-
-// === ОБРАБОТКА ФОРМЫ КОНТАКТОВ ===
-const contactForm = document.getElementById('contactForm');
-if(contactForm){
-  contactForm.addEventListener('submit', e=>{
-    e.preventDefault();
-    alert('Сообщение отправлено!');
-    contactForm.reset();
-  });
-}
