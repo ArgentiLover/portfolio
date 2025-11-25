@@ -59,3 +59,14 @@
 
 - [Морской бой](https://github.com/ArgentiLover/SeaBattleProject)  
 - [Учебный сайт](https://github.com/ArgentiLover/my-awesome-project)
+
+
+## Отчеты Lighthouse по доступности
+
+| Сайт | Отчет |
+|------|-------|
+| Dzen | [📄 dzen.pdf](./assets/dzen.pdf) |
+| GitHub | [📄 github.pdf](./assets/github.pdf) |
+| StackOverflow | [📄 stackoverflow.pdf](./assets/stackoverflow.pdf) |
+| Google | [📄 google.pdf](./assets/google.pdf) |
+| Habr | [📄 habr.pdf](./assets/habr.pdf) |
